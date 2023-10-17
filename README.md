@@ -31,7 +31,7 @@ A GitHub action that integrates [Checkstyle](https://github.com/checkstyle/check
 
 ## Example
 
-An example of how the reported Checkstyle violations will look on a pull request is shown below ([link to example PR](https://github.com/dbelyaev/action-checkstyle-tester/pull/9)):
+An example of how the reported Checkstyle violations will look on a pull request is shown below ([link to example PR](https://github.com/equinor/action-checkstyle-tester/pull/1)):
 
 ![PR comment with violation](https://user-images.githubusercontent.com/6915328/149333188-4600a75d-5670-4013-9395-d5852e3c7839.png)
 
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: dbelyaev/action-checkstyle@v2
+      - uses: equinor/action-checkstyle@v2
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
@@ -60,11 +60,11 @@ When using GitHub Actions, you can pin to a specific version in two ways:
 #### Pinning by Tag
 
 ```yaml
-- uses: dbelyaev/action-checkstyle@v2 # pin to the latest major tag
+- uses: equinor/action-checkstyle@v2 # pin to the latest major tag
 ```
 
 ```yaml
-- uses: dbelyaev/action-checkstyle@v2.0.0 # pin to specific version tag
+- uses: equinor/action-checkstyle@v2.0.0 # pin to specific version tag
 ```
 
 - **Pros**: Convenient, automatically receives updates
@@ -112,14 +112,14 @@ For automated SHA updates, consider using tools like [Dependabot (owned by GitHu
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v5
-        - uses: dbelyaev/action-checkstyle@v2
+        - uses: equinor/action-checkstyle@v2
           with:
             github_token: ${{ secrets.github_token }}
             reporter: github-pr-review
             checkstyle_config: sun_checks.xml
   ```
 
-  Link to [example PR](https://github.com/dbelyaev/action-checkstyle-tester/pull/10).
+  Link to [example PR](https://github.com/equinor/action-checkstyle-tester/pull/2).
 
 - ### `checkstyle_version`
 
@@ -142,7 +142,7 @@ For automated SHA updates, consider using tools like [Dependabot (owned by GitHu
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v5
-        - uses: dbelyaev/action-checkstyle@v2
+        - uses: equinor/action-checkstyle@v2
           with:
             github_token: ${{ secrets.github_token }}
             reporter: github-pr-review
@@ -174,7 +174,7 @@ For automated SHA updates, consider using tools like [Dependabot (owned by GitHu
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v5
-        - uses: dbelyaev/action-checkstyle@v2
+        - uses: equinor/action-checkstyle@v2
           with:
             github_token: ${{ secrets.github_token }}
             reporter: github-pr-review
